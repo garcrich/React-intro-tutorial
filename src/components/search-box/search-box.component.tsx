@@ -1,6 +1,11 @@
 import './search-box.styles.css';
 
-const SearchBox = ({placeholder, setSearch}) => {
+type SearchBoxProps = {
+  placeholder?: string;
+  setSearch: (a: string) => void;
+}
+
+const SearchBox = ({placeholder, setSearch}: SearchBoxProps) => {
   return (
     <input 
       className='search-box'
